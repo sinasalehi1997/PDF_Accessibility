@@ -94,7 +94,7 @@ def lambda_handler(event, context):
 
 
     local_path = f"/tmp/{file_basename}"
-    download_file_from_s3(s3_bucket,file_basename ,save_path, local_path)
+    download_file_from_s3(s3_bucket,s3_key,save_path, local_path)
 
     try:
         pdf_file = open(local_path, 'rb')
